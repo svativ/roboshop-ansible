@@ -17,7 +17,8 @@
         path: /etc/mongod.conf
         regexp: '127.0.0.1'
         replace: 0.0.0.0
-    - name: Start MongoDB Srvice
+
+    - name: Start MongoDB Service
       ansible.built.systemd:
         name: mongod
         state: restarted

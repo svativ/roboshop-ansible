@@ -1,7 +1,11 @@
-- name: Copy MongoDB Yum repo file
-  ansible.builtin.copy:
-    src: mongo.repo
-    dest: /etc/yum.repos.d/mongo.repo
+- name: RoboShop Project - Frontend
+  hosts: all
+  become= yes
+  tasks:
+    - name: Copy MongoDB Yum repo file
+      ansible.builtin.copy:
+        src: mongo.repo
+        dest: /etc/yum.repos.d/mongo.repo
 
 - name: Install MongoDB
   ansible.builtin.yum:

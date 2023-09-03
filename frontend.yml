@@ -1,6 +1,6 @@
 - name: RoboShop Project - Frontend
   hosts: all
-  become: true
+  become=yes
   tasks:
     - name: Install Nginx
       ansible.builtin.yum:

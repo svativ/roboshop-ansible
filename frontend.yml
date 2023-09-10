@@ -2,8 +2,6 @@
   hosts: all
   become: true
   tasks:
-
-
     - name: Copy RoboShop Configuration
       ansible.builtin.copy:
         src: nginx-roboshop.conf
@@ -26,7 +24,7 @@
         remote_src: yes
 
     - name: Restart Nginx
-      ansible.builtin .systemd:
+      ansible.builtin.systemd:
         name: nginx
         state: restarted
         enabled:

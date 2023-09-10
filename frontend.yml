@@ -2,10 +2,15 @@
   hosts: all
   become: true
   tasks:
+    - name: Install Nginx
+      ansible.builtin.yum:
+        name: nginx
+        state: installed
+
     - name: Copy RoboShop Configuration
       ansible.builtin.copy:
-        src: nginx-roboshop.conf
-        dest: /etc/nginx/default.d/roboshop.conf
+        src: nginx-roboShop.conf
+        dest: /etc/nginx/default.d/roboShop.conf
 
     - name: Clean old Content
       ansible.builtin.file:

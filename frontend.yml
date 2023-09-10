@@ -20,11 +20,13 @@
       ansible.builtin.file:
       path: /usr/share/nginx/html
       state: directory
+
     - name: Download and Extract application Content
       ansible.builtin.unarchive:
         src: https://roboshop-artifacts.s3.amazonaws.com/frontend.zip
         dest: /usr/share/nginx/html/
         remote_src: yes
+
     - name: Restart Nginx
       ansible.builtin .systemd:
         name: nginx

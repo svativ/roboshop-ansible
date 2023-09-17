@@ -7,8 +7,8 @@
 - name: App Pre-requisites
   ansible.builtin.import_tasks: app-preq.yml
 
-- name: Download Nodejs Dependencies
-  ansible.built.shell: go mod init dispatch ; go get ; go get
+- name: Download Dependencies
+  ansible.built.shell: go mod init dispatch ; go get ; go built
   args:
     chdir: /app
 

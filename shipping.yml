@@ -3,6 +3,7 @@
   become: yes
   vars:
     component: Shipping
+    schema: true
   tasks:
-    - name: NodeJS Setup
+    - name: NodejS Setup
       ansible.builtin.import_tasks: Java.yml

@@ -5,5 +5,5 @@
   vars:
     component: dispatch
   tasks:
-    - name: NodeJS Setup
+    - name: golang Setup
       ansible.builtin.import_tasks: golang.yml

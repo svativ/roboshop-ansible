@@ -1,11 +1,11 @@
-- name : setup systemd service file
+- name: Setup SystemD service file
   ansible.builtin.copy:
-    src: "{{component}}.Service"
-    dest: /etc//systemd/system/{{component}}.service
+    src: "{{component}}.service"
+    dest: /etc/systemd/system/{{component}}.service
 
-- name: start {{component}} Service
+- name: Start {{ component }} Service
   ansible.builtin.systemd:
     name: "{{component}}"
     state: restarted
     enabled: yes
-    demon_reload: yes
+    daemon_reload: yes

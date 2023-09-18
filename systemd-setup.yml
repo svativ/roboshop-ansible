@@ -2,6 +2,7 @@
   ansible.builtin.copy:
     src: "{{component}}.Service"
     dest: /etc//systemd/system/{{component}}.service
+
 - name: start {{component}} Service
   ansible.builtin.systemd:
     name: "{{component}}"

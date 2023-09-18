@@ -12,6 +12,8 @@
         src: nginx-roboShop.conf
         dest: /etc/nginx/default.d/roboShop.conf
 
+
+
     - name: Clean old Content
       ansible.builtin.file:
         path: /usr/share/nginx/html

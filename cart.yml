@@ -1,8 +1,9 @@
-- name : Cart Setup
+- name: Cart Setup
   hosts: all
-  become: yes
+  become: true
   vars:
-    component: Cart
+    component: cart
   tasks:
-    - name: NodejS Setup
-      ansible.builtin.import_tasks: nodeJs.yml
+    - name: NodeJS Setup
+      ansible.builtin.import_tasks:
+        file: nodejs.yml

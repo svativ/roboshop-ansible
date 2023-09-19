@@ -6,4 +6,4 @@
   tasks:
     - name: NodeJS Setup
       ansible.builtin.import_tasks:
-        file: nodejs.yml
+        file: nodejs.y

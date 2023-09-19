@@ -12,3 +12,5 @@
   ansible.builtin.shell: mongo --host mongodb-dev.sdevops99.online </app/schema/{{component}}.js
 
 
+
+

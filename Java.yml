@@ -3,20 +3,17 @@
     name: maven
     state: installed
 
-- name: Prerequisites
-  ansible.builtin.import_tasks:
-    file: app-preq.yml
+- name: App Pre-requisites
+  ansible.builtin.import_tasks: app-preq.yml
 
-- name: Download Java Dependencies
+- name: Download Maven Dependencies
   ansible.builtin.shell: mvn clean package ; mv target/{{component}}-1.0.jar {{component}}.jar
   args:
     chdir: /app
 
 - name: Schema Setup
-  ansible.builtin.import_tasks:
-    file: mysql-schema.yml
+  ansible.builtin.import_tasks: mysql-schema.yml
   when: schema is defined
 
-- name: Service Setup
-  ansible.builtin.import_tasks:
-    file: systemd-setup.yml
+- name: SystemD Setup
+  ansible.builtin.import_tasks: systemd-setup.yml

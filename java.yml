@@ -20,5 +20,3 @@
 - name: Service Setup
   ansible.builtin.import_tasks:
     file: systemd-setup.yml
-#  func_systemd
-

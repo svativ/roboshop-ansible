@@ -1,4 +1,4 @@
-- name: RoboShop Setup
+- name: RobodShop Setup
   hosts: all
   become: true
   roles:
